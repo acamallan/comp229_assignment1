@@ -10,22 +10,22 @@ import oracle from '../assets/oracle.png';
 import api from '../assets/api.png';
 import reactjs from '../assets/reactjs.png';
 export default function Services() {
+    const servicesTitle = ["Coldfusion", "Oracle SQL", "API", "ReactJS"]
+    const servicesImages = [coldfusion, oracle, api, reactjs]
     return (
         <>
         <div className='content'>
             <h3>My Services:</h3> 
             <table>
                 <tr>
-                    <td align='center'>Colfusion</td>
-                    <td align='center'>Oracle SQL</td>
-                    <td align='center'>API</td>
-                    <td align='center'>ReactJS</td>
+                    {
+                        servicesTitle.map((data) => <td align='center'>{data}</td>)
+                    }
                 </tr>
                 <tr>
-                    <td align='center'><img src={coldfusion} width="100px" /></td>
-                    <td align='center'><img src={oracle} width="100px" /></td>
-                    <td align='center'><img src={api} width="100px" /></td>
-                    <td align='center'><img src={reactjs} width="100px" /></td>
+                    {
+                        servicesImages.map((data) => <td align='center'><img src={data} width="100px" /></td>)
+                    }
                 </tr>
             </table>
         </div>
