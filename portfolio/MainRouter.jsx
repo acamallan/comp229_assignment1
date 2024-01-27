@@ -10,6 +10,7 @@ import Home from './components/Home';
 import About from './src/pages/about'
 import Contact from './src/pages/contact';
 import Services from './src/pages/services';
+import Project from './src/pages/project';
 import Layout from './components/Layout';
 const MainRouter = () => {
     return (<div>
@@ -19,6 +20,7 @@ const MainRouter = () => {
             <Route exact path="/about" element={<About />} />
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/services" element={<Services />} />
+            <Route exact path="/project" element={<Project />} />
         </Routes>
     </div>
     )
